@@ -1,12 +1,23 @@
-from sklearn.linear_model import LogisticRegression
+# Python imports e.g., os, math...
 import argparse
-import os
-import numpy as np
-from sklearn.metrics import mean_squared_error
 import joblib
+import os
+
+# Third party libraries imports
+
+# Numpy imports e.g., numpy,..
+import numpy as np
+
+# Pandas imports e.g., pandas...
+import pandas as pd
+
+# sklearn imports e.g., linear_model,..
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
-import pandas as pd
+
+# Azure imports e.g., Workspace,...
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
@@ -14,11 +25,19 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
-ds = ### YOUR CODE HERE ###
+# create bank marketing tabular dataset from public azure ml.
+bankmarketing_webpath = [
+                          'https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv'
+                        ]
 
-x, y = clean_data(ds)
+#create bankmarketing data set in tabular format using TabularDatasetFactory
+bankmarketing_dataset = TabularDatasetFactory.from_delimited_files(path=bankmarketing_webpath)
+
+x, y = clean_data(bankmarketing_dataset )
 
 # TODO: Split data into train and test sets.
+
+x_train, x_test, y_train, y_test = train_test_split(x,y)
 
 ### YOUR CODE HERE ###a
 
@@ -49,6 +68,8 @@ def clean_data(data):
     x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
+
+    return x_df, y_df
     
 
 def main():
