@@ -21,7 +21,7 @@ from sklearn.preprocessing import OneHotEncoder
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
-# TODO: Create TabularDataset using TabularDatasetFactory
+# VRK: Create TabularDataset using TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
@@ -35,11 +35,9 @@ bankmarketing_dataset = TabularDatasetFactory.from_delimited_files(path=bankmark
 
 x, y = clean_data(bankmarketing_dataset )
 
-# TODO: Split data into train and test sets.
+# VRK: Split data into train and test sets.
 
 x_train, x_test, y_train, y_test = train_test_split(x,y)
-
-### YOUR CODE HERE ###a
 
 run = Run.get_context()
 
