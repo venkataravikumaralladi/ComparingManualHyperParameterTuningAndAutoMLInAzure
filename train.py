@@ -33,13 +33,6 @@ bankmarketing_webpath = [
 #create bankmarketing data set in tabular format using TabularDatasetFactory
 bankmarketing_dataset = TabularDatasetFactory.from_delimited_files(path=bankmarketing_webpath)
 
-x, y = clean_data(bankmarketing_dataset )
-
-# VRK: Split data into train and test sets.
-
-x_train, x_test, y_train, y_test = train_test_split(x,y)
-
-run = Run.get_context()
 
 def clean_data(data):
     # Dict for cleaning data
@@ -70,7 +63,12 @@ def clean_data(data):
     return x_df, y_df
     
 
+
+    
 def main():
+    
+    run = Run.get_context()
+    
     # Add arguments to script
     parser = argparse.ArgumentParser()
 
@@ -81,10 +79,19 @@ def main():
 
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
+    
+    # VRK: Data cleaning step
+    x, y = clean_data(bankmarketing_dataset )
+    # VRK: Split data into train and test sets.
+    x_train, x_test, y_train, y_test = train_test_split(x,y)
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
     accuracy = model.score(x_test, y_test)
+    
+    #VRK:Save the model.
+    os.makedirs('outputs', exist_ok=True)
+    joblib.dump(model, 'outputs/vrk_bankmodel.joblib')
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
