@@ -4,7 +4,7 @@ Table of contents
 =================
 
 <!--ts-->
-  * [Overview] (#overview)
+  * [Overview](##overview)
   * [Summary] (#summary)
   * [Scikit-learn pipeline] (#scikit-learn-pipeline)
   * [AutoML pipeline] (#autoML-pipeline)
