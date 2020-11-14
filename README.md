@@ -40,5 +40,5 @@ AutoML module analyze various models, automates feature engineering, and cross v
 AutoML output showed that data is imbalanced. It is possible that accuracy is not right metric to use. Use different metric like F1 score or AOC metric. Understanding how model is making predictions, and how to deploy trained models. By understanding how model is making predictions, will help us in understanding collect right data, able to explain why certain decisions are taken and corrections required if any can be made in collecting data.
 
 ## Proof of cluster clean up
-Image is shown in attached file "DeleteClustersnapshot.png".
+![Delete cluster](https://github.com/venkataravikumaralladi/ComparingManualHyperParameterTuningAndAutoMLInAzure/blob/master/DeleteClustersnapshot.png)
 
