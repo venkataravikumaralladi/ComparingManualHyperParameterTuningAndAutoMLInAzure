@@ -5,12 +5,12 @@ Table of contents
 
 <!--ts-->
   * [Overview](##overview)
-  * [Summary] (#summary)
-  * [Scikit-learn pipeline] (#scikit-learn-pipeline)
-  * [AutoML pipeline] (#autoML-pipeline)
-  * [Pipelines comparison] (#pipeline-comparison)
-  * [Future work] (#future-work)
-  * [Cleanup] (#proof-of-cluster-clean up)
+  * [Summary](##summary)
+  * [Scikit-learn pipeline](##scikit-learn-pipeline)
+  * [AutoML pipeline](##autoML-pipeline)
+  * [Pipelines comparison](##pipeline-comparison)
+  * [Future work](##future-work)
+  * [Cleanup](##proof-of-cluster-clean-up)
 <!--te-->
 
 ## Overview
