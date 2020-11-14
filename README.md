@@ -44,7 +44,8 @@ HyperDrive module requires data science engineer to perform data cleaning, data 
 Machine learning process is a labour intensive as it requires number of runs to get right model. AutoML automates this process by analyzing various models, automates feature engineering, and cross validation. There is high chance that performance metric is higher than Hyperdrive module as we have observed in present context.
 
 ## Future work
-AutoML output showed that data is imbalanced. It is possible that accuracy is not right metric to use. Use different metric like F1 score or AOC metric. Understanding how model is making predictions, and how to deploy trained models. By understanding how model is making predictions, will help us in understanding collect right data, able to explain why certain decisions are taken and corrections required if any can be made in collecting data.
+AutoML output showed that data is imbalanced. It is possible that accuracy is not right metric to use. Use different metric like F1 score or AOC metric as these metrics consider data imbalance in data set. Understanding how model is making predictions, and how to deploy trained models.  Planning to study further by spliting data in train data and test set such that they have right balanced data.
+Planning to use Support Vector Machine (SVM) algorithm, Naive Bayes Classifier, and deep neural networks to see how these models perform on given data.
 
 ## Proof of cluster clean up
 ![Delete cluster](https://github.com/venkataravikumaralladi/ComparingManualHyperParameterTuningAndAutoMLInAzure/blob/master/DeleteClustersnapshot.png)
