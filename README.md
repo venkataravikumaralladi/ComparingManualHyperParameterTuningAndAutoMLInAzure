@@ -1,5 +1,18 @@
 # Optimizing an ML Pipeline in Azure
 
+Table of contents
+=================
+
+<!--ts-->
+  * [Overview] (#Overview)
+  * [Summary] (#Summary)
+  * [Scikit-learn pipeline] (#Scikit-learn Pipeline)
+  * [AutoML pipeline] (#AutoML Pipeline)
+  * [Pipelines comparison] (#Pipeline comparison)
+  * [Future work] (#Future work)
+  * [Cleanup] (#Proof of cluster clean up)
+<!--te-->
+
 ## Overview
 This project is part of the Udacity Azure ML developer Nanodegree program. In this project, we build and optimize an Azure ML pipeline using the Python SDK, Azure Hyper parameter tuning module and Scikit-learn logistic regression model. This model is then compared to an Azure AutoML run.
 
@@ -15,7 +28,7 @@ Random parameter sampling is chosen values in hyper parameters value space. This
 
 Bandit early termination policy is used to stop training if performance of current run is not with in the best run limits to avoid resource usage. It is observed that best parameter values for “C” is 0.1 and “max_iter” is 200 and best accuracy achieved is 0.91237
 
-## AutoML
+## AutoML Pipeline
 AutoML analyzed various model algorithms to get the best prediction.  From AutoML best performance is achieved is 0.9161 using “PrefittedSoftVotingClassififer.
 
 ## Pipeline comparison
