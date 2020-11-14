@@ -13,7 +13,7 @@ Table of contents
   * [Cleanup] (#Proof of cluster clean up)
 <!--te-->
 
-## Overview
+## Overview (#Overview)
 This project is part of the Udacity Azure ML developer Nanodegree program. In this project, we build and optimize an Azure ML pipeline using the Python SDK, Azure Hyper parameter tuning module and Scikit-learn logistic regression model. This model is then compared to an Azure AutoML run.
 
 ## Summary
